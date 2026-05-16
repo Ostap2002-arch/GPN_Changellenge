@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "device-data-service"
+version = "1.0.0"
+description = "Service for collecting and analyzing device data"
+authors = ["Your Name <you@example.com>"]
+packages = [{ include = "device_data_service" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"  # Лучше использовать 3.11 (современнее)
+fastapi = "^0.104.0"
+uvicorn = {extras = ["standard"], version = "^0.24.0"}
+sqlalchemy = "^2.0.0"
+pydantic = "^2.0.0"
+pydantic-settings = "^2.0.0"
+alembic = "^1.12.0"
+celery = "^5.3.0"
+redis = "^5.0.0"
+psycopg2-binary = "^2.9.10"
+numpy = "^1.24.0"
+scipy = "^1.11.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+locust = "^2.16.0"
+httpx = "^0.25.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
