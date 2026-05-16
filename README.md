@@ -1,8 +1,6 @@
 # Device Data Service
 
-![Architecture](image)
-
-Сбор показаний устройств, асинхронный анализ и REST API.
+Сбор показаний устройств, асинхронный анализ.
 
 ## В проекте
 
@@ -11,6 +9,9 @@
 - Celery + Redis
 - Пагинация для `/devices/{device_id}/readings`
 - Результаты нагрузочного тестирования: `Locust.html`
+
+![alt text](image-1.png)
+
 
 ## Быстрый запуск
 
@@ -103,37 +104,10 @@ curl -X GET "http://localhost:8000/analysis/device/device_001?start_time=2024-01
    - Адрес: `http://localhost:8089`
    - Настройте параметры нагрузки через UI
 
-### Тестовые сценарии
-
-Load test включает следующие операции:
-
-| Операция | Вес | Описание |
-|----------|------|---------|
-| add_device_reading | 5 | Добавление показания устройства |
-| get_device_readings | 3 | Получение показаний |
-| analyze_device_all_time | 4 | Анализ за всё время |
-| analyze_device_last_24h | 3 | Анализ за 24 часа |
-| analyze_device_last_7d | 2 | Анализ за 7 дней |
-| create_device | 2 | Создание нового устройства |
-| list_devices | 1 | Получение списка устройств |
-| get_single_device | 1 | Получение информации об устройстве |
-| create_user | 2 | Создание пользователя |
-| health_check | 1 | Проверка здоровья |
 
 ## Результаты нагрузочного тестирования
 
 - Все итоги хранятся в файле `Locust.html`.
-
-## Публикация на GitHub
-
-```bash
-git init
-git remote add origin https://github.com/Ostap2002-arch/GPN_Changellenge.git
-git add .
-git commit -m "Prepare project for GitHub deployment"
-git branch -M main
-git push -u origin main
-```
 
 
 
