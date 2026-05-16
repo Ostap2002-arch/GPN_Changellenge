@@ -1,5 +1,7 @@
 # Device Data Service
 
+![Architecture](image-1.png)
+
 Сбор показаний устройств, асинхронный анализ.
 
 ## В проекте
